@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my skills, projects, and certi
 
 ## 🌐 Live Demo
 
-**[View Portfolio →](https://niko5886.github.io/portfolio-N-Stoyanov/)**
+**[View Portfolio →](https://niko5886.github.io/portfvolio-N-Stoyanov/)**
 
 [![Netlify Status](https://img.shields.io/badge/Netlify-Deployed-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://app.netlify.com)
 
