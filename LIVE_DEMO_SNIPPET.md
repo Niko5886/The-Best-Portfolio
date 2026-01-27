@@ -2,7 +2,7 @@
 
 You can view a live preview of this portfolio at:
 
-**https://Niko5886.github.io/immoworld-website/**
+**https://niko5886.github.io/The-Best-Portfolio/**
 
 The site is live and fully functional on GitHub Pages!
 
@@ -11,7 +11,7 @@ To add the Live Demo section to your `README.md`, copy this snippet into the loc
 ```
 ## Live Demo
 
-View the live site: https://Niko5886.github.io/immoworld-website/
+View the live site: https://niko5886.github.io/The-Best-Portfolio/
 
 ``` 
 
