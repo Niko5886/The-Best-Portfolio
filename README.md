@@ -39,28 +39,45 @@ A modern, responsive portfolio website showcasing my skills, projects, and certi
 ## 📂 Project Structure
 
 ```
-portfolio/
+The-Best-Portfolio_Three.js/
 │
-├── index.html              # Main HTML file
-├── style.css               # Stylesheet with dark mode support
-├── script.js               # JavaScript functionality
-├── README.md               # Project documentation
+├── index.html                    # Main HTML file
+├── style.css                     # Stylesheet with dark mode support
+├── script.js                     # JavaScript functionality
+├── README.md                     # Project documentation
+├── LIVE_DEMO_SNIPPET.md          # Live demo code
 │
-├── portF11.jpg            # Profile image (home section)
-├── portF22.jpg            # Profile image (about section)
+├── portF11.jpg                  # Profile image (home section)
+├── portF22.jpg                  # Profile image (about section)
 │
-├── img_projekt1-6.png     # Project screenshots
+├── img_gloos.png                # Project images
+├── img_old_florence.png
+├── img_projejekt1.png
+├── img_projekt2.png
+├── img_projekt3.png
+├── img_projekt4.png
+├── img_projekt5.png
+├── img_projekt6.png
+├── img_projekt7.png
 │
-├── Nikolay_Stoyanov_CV.pdf              # Downloadable CV
-├── Kombizertifikat_Frontend_Entwickler.pdf
-├── Zertifikat_Webdesign.pdf
-├── Zertifikat_Javascript_Ajax.pdf
-├── Zertifikat_JavaScript_Bibliothek.pdf
-├── Zertifikat_JAVA.pdf
-├── Zertifikat_Python.pdf
-├── certifikate_softuni_basics.pdf
-├── certifikate_softuni_fundamentals_JS.pdf
-└── SoftUni_VibeCoding_PDF.pdf
+├── CVEnglish.pdf                # Downloadable CV
+├── Nikolay_Stoyanov_CV.pdf      # Downloadable CV (German)
+│
+├── Certificates (12 total):
+│   ├── Kombizertifikat_Frontend_Entwickler.pdf
+│   ├── Zertifikat_Webdesign.pdf
+│   ├── Zertifikat_Javascript_Ajax.pdf
+│   ├── Zertifikat_JavaScript_Bibliothek.pdf
+│   ├── Zertifikat_JAVA.pdf
+│   ├── Zertifikat_Python.pdf
+│   ├── certifikate_softuni_basics.pdf
+│   ├── certifikate_softuni_fundamentals_JS.pdf
+│   ├── SoftUni_VibeCoding_PDF.pdf
+│   ├── Introduction to Programming with AI - October 2025 - Certificate.pdf
+│   ├── JS Advanced - September 2025 - Certificate.pdf
+│   └── JS Applications - October 2025 - Certificate.pdf
+│
+└── cert/                        # Certificate files directory
 ```
 
 ---
@@ -80,15 +97,19 @@ portfolio/
 - Downloadable CV
 
 ### 🎓 Certificates
-- 9 Professional certificates
+- 12 Professional certificates
 - Interactive PDF viewer
 - Certifications from:
-  - Frontend Development
-  - Web Design
-  - JavaScript & React
+  - Frontend Development (Kombizertifikat)
+  - Web Design (Zertifikat)
+  - JavaScript & Ajax (Zertifikat)
+  - JavaScript Library (Zertifikat)
   - Java Programming
   - Python Programming
-  - SoftUni courses
+  - SoftUni courses (Basics, Fundamentals JS, VibeCoding)
+  - AI Programming (October 2025)
+  - JS Advanced (September 2025)
+  - JS Applications (October 2025)
 
 ### 💼 Portfolio
 - 6 Completed projects
@@ -175,7 +196,7 @@ portfolio/
 
 ## 📄 License
 
-© 2025 Nikolay Stoyanov. All rights reserved.
+© 2026 Nikolay Stoyanov. All rights reserved.
 
 ---
 

@@ -11,54 +11,102 @@
   </head>
 
   <body>
+    <!-- Three.js Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
   
     <!-- DEPLOYED 2026 - NEW VERSION -->
     <!-- loader -->
     <div class="loader-wrapper">
-      <div class="loader"></div>
+      <div class="loader-content">
+        <div class="loader"></div>
+        <div class="loader-text">LOADING<span class="dots"></span></div>
+      </div>
     </div>
-    
-    <!-- cursors  -->
-    <div class="cursor-1"></div>
-    <div class="cursor-2"></div>
 
-    <div id="menu-bars" class="fas fa-bars"></div>
+    <div id="menu-bars" class="fas fa-bars">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </div>
 
     <!-- header  -->
     <header>
-      <a href="#" class="logo"> <span>Nikolay</span> Stoyanov </a>
+      <!-- Scroll Progress Indicator -->
+      <div class="scroll-progress"></div>
+      
+      <a href="#" class="logo" aria-label="Nikolay Stoyanov Logo">
+        <span class="logo-accent">Nikolay</span> 
+        <span class="logo-text">Stoyanov</span>
+      </a>
 
-      <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About Me</a>
-        <a href="#zertifikate">Certificates</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
+      <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active" data-section="home">
+          <span class="nav-icon"><i class="fas fa-home"></i></span>
+          <span class="nav-text">Home</span>
+          <span class="nav-indicator"></span>
+        </a>
+        <a href="#about" class="nav-link" data-section="about">
+          <span class="nav-icon"><i class="fas fa-user"></i></span>
+          <span class="nav-text">About Me</span>
+          <span class="nav-indicator"></span>
+        </a>
+        <a href="#zertifikate" class="nav-link" data-section="zertifikate">
+          <span class="nav-icon"><i class="fas fa-certificate"></i></span>
+          <span class="nav-text">Certificates</span>
+          <span class="nav-indicator"></span>
+        </a>
+        <a href="#portfolio" class="nav-link" data-section="portfolio">
+          <span class="nav-icon"><i class="fas fa-briefcase"></i></span>
+          <span class="nav-text">Portfolio</span>
+          <span class="nav-indicator"></span>
+        </a>
+        <a href="#contact" class="nav-link" data-section="contact">
+          <span class="nav-icon"><i class="fas fa-envelope"></i></span>
+          <span class="nav-text">Contact</span>
+          <span class="nav-indicator"></span>
+        </a>
       </nav>
 
-      <div class="follow">
-        <a href="#" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="#" class="fab fa-instagram"></a>
-        <a href="#" class="fab fa-linkedin"></a>
-      </div>
-
-      <div class="theme-toggle" id="theme-toggle">
-        <i class="fas fa-moon"></i>
+      <div class="social-links" role="complementary" aria-label="Social Media Links">
+        <a href="https://www.linkedin.com/in/nikolay-stoyanov-a79891356" target="_blank" rel="noopener" class="social-link" data-tooltip="LinkedIn" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+          <span class="ripple"></span>
+        </a>
+        <a href="https://github.com/Niko5886" target="_blank" rel="noopener" class="social-link" data-tooltip="GitHub" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+          <span class="ripple"></span>
+        </a>
       </div>
     </header>
 
     <!-- home section  -->
     <section class="home" id="home">
       <div class="content">
-        <h3>My name is <span>Nikolay Stoyanov</span></h3>
-        <p class="info">I am a Junior Frontend AI Developer</p>
-        <p class="text">and I am still learning JavaScript and AI Vibe Coding</p>
+        <h3><span>Nikolay Stoyanov</span></h3>
+        <p class="info">I am a Junior Frontend | AI Software Developer</p>
+        
         <a href="#about" class="btn">About Me</a>
       </div>
 
       <div class="image">
         <img src="portF11.jpg" alt="Foto von Nikolay Stoyanov" />
+        <div class="tech-icons-orbit">
+          <div class="floating-icon icon-1"><i class="fab fa-js"></i></div>
+          <div class="floating-icon icon-2"><i class="fab fa-html5"></i></div>
+          <div class="floating-icon icon-3"><i class="fab fa-css3-alt"></i></div>
+          <div class="floating-icon icon-4"><i class="fab fa-java"></i></div>
+          <div class="floating-icon icon-5"><i class="fab fa-python"></i></div>
+          <div class="floating-icon icon-6"><i class="fab fa-react"></i></div>
+          <div class="floating-icon icon-7"><i class="fab fa-angular"></i></div>
+          <div class="floating-icon icon-8"><i class="fab fa-vuejs"></i></div>
+          <div class="floating-icon icon-9"><i class="fas fa-robot"></i></div>
+          <div class="floating-icon icon-10"><i class="fab fa-bootstrap"></i></div>
+          <div class="floating-icon icon-11"><i class="fas fa-wind"></i></div>
+          <div class="floating-icon icon-12"><i class="fas fa-paint-brush"></i></div>
+          <div class="floating-icon icon-13"><i class="fas fa-pencil-ruler"></i></div>
+          <div class="floating-icon icon-14"><i class="fab fa-node-js"></i></div>
+          <div class="floating-icon icon-15"><i class="fas fa-bolt"></i></div>
+        </div>
       </div>
     </section>
 
@@ -73,14 +121,20 @@
           </div>
 
           <div class="content">
-            <h3>My name is Nikolay Stoyanov & I am a Junior AI Developer</h3>
-            <p>I am passionate about creating beautiful and functional web solutions. I specialize in frontend development with a focus on modern JavaScript/TypeScript frameworks and responsive design. Currently, I am developing practical skills in vibe coding at a software university, using AI tools for rapid prototyping and building interactive web applications. I develop projects by integrating technologies such as React/Next.js, Angular, Vue, Tailwind CSS, Bootstrap, Node.js + Express, API endpoints, and UI elements. I am always eager to learn new technologies and improve my skills.</p>
+            <h3>Nikolay Stoyanov & I am a Junior AI Developer</h3>
+            <p>I am passionate about creating beautiful and functional web solutions and writing clean, maintainable code. I specialize in frontend development with a strong focus on modern JavaScript frameworks and responsive design.
+
+Currently, I am enhancing my practical skills in Vibe Coding at Software University (SoftUni), where I use AI tools for rapid prototyping and building interactive web applications as well as more complex software solutions.
+
+I develop projects by integrating technologies such as React, Next.js, Angular, Vue, Tailwind CSS, Bootstrap, and Node.js, while applying UI and UX principles. I am always motivated to learn new technologies and continuously improve my skills.
+
+I have experience with a wide range of AI tools, including Copilot, Git, GitHub, Bolt, Cursor, Lovable, and others, and I am highly proficient in leveraging artificial intelligence throughout the development process. I also have solid knowledge of web design and basic knowledge of Python and Java..</p>
             <div class="box-container">
               <div class="box">
                 <p><span>Age:</span> 37</p>
                 <p><span>Gender:</span> Male</p>
                 <p><span>Language:</span> German, Bulgarian, English</p>
-                <p><span>Profession:</span> Front-End Developer</p>
+                <p><span>Profession:</span> AI Software Developer</p>
               </div>
               <div class="box">
                 <p><span>Phone:</span> +359 897949326</p>
@@ -95,16 +149,16 @@
       <h1 class="heading" id="skills"><span>My</span> Skills</h1>        <div class="row-2">
           <div class="skills">
             <div class="progress">
-              <h3>Frontend Developer <span>85%</span></h3>
-              <div class="bar"><span style="width:85%"></span></div>
+              <h3>Frontend Developer <span>90%</span></h3>
+              <div class="bar"><span style="width:90%"></span></div>
             </div>
             <div class="progress">
-              <h3>Web Design with HTML, CSS and Dreamweaver <span>80%</span></h3>
+              <h3>Web Design - HTML, CSS  <span>80%</span></h3>
               <div class="bar"><span style="width:80%"></span></div>
             </div>
             <div class="progress">
-              <h3>JavaScript Developer <span>85%</span></h3>
-              <div class="bar"><span style="width:85%"></span></div>
+              <h3>JavaScript Developer <span>90%</span></h3>
+              <div class="bar"><span style="width:90%"></span></div>
             </div>
             <div class="progress">
               <h3>Programming with Python <span>25%</span></h3>
@@ -114,6 +168,10 @@
               <h3>Vibe Coding <span>99%</span></h3>
               <div class="bar"><span style="width:97%"></span></div>
             </div>
+            <div class="progress">
+              <h3>Java <span>25%</span></h3>
+              <div class="bar"><span style="width:25%"></span></div>
+            </div>
           </div>
 
           <div class="box-container">
@@ -122,15 +180,15 @@
               <p>Experience</p>
             </div>
             <div class="box">
-              <h3>> 4</h3>
+              <h3>> 5</h3>
               <p>Satisfied Clients</p>
             </div>
             <div class="box">
-              <h3>> 6</h3>
+              <h3>> 8+</h3>
               <p>Completed Projects</p>
             </div>
             <div class="box">
-              <h3>> 4</h3>
+              <h3>> 5</h3>
               <p>Awards Received</p>
             </div>
           </div>
@@ -142,69 +200,155 @@
 
     <section class="zertifikate" id="zertifikate">
   <div class="center">
-    <h1 class="heading"><span>my</span> certificates</h1>
+    <h1 class="heading"><span>My</span> Certificates</h1>
 
-    <div class="box-container">
-      <div class="box">
-        <embed src="Kombizertifikat_Frontend_Entwickler.pdf" type="application/pdf" />
-        <h3>Frontend Developer & Web Design</h3>
+    <div class="certificate-slider-container">
+      <button class="cert-slider-btn cert-prev" aria-label="Previous certificates">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <div class="certificate-slider-wrapper">
+        <div class="certificate-slider">
+          <div class="cert-slide">
+            <div class="cert-card">
+              <img src="cert/cert_frontend.png" alt="Frontend Developer & Web Design Certificate" />
+              <h3>Frontend Developer & Web Design</h3>
+              <div class="cert-icons">
+                <a href="Kombizertifikat_Frontend_Entwickler.pdf" target="_blank" rel="noopener" class="fas fa-eye" title="Преглед"></a>
+                <a href="Kombizertifikat_Frontend_Entwickler.pdf" download class="fas fa-download" title="Изтегли"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-slide">
+            <div class="cert-card">
+              <img src="cert/cert_webdesign.png" alt="Web Design Certificate" />
+              <h3>Web Design with HTML, CSS and Dreamweaver</h3>
+              <div class="cert-icons">
+                <a href="Zertifikat_Webdesign.pdf" target="_blank" rel="noopener" class="fas fa-eye" title="Преглед"></a>
+                <a href="Zertifikat_Webdesign.pdf" download class="fas fa-download" title="Изтегли"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-slide">
+            <div class="cert-card">
+              <img src="cert/cert_javascript.png" alt="JavaScript Developer Certificate" />
+              <h3>JavaScript Developer (AJAX, DOM, SPA)</h3>
+              <div class="cert-icons">
+                <a href="Zertifikat_Javascript_Ajax.pdf" target="_blank" rel="noopener" class="fas fa-eye" title="Преглед"></a>
+                <a href="Zertifikat_Javascript_Ajax.pdf" download class="fas fa-download" title="Изтегли"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-slide">
+            <div class="cert-card">
+              <img src="cert/cert_react.png" alt="React JavaScript Library Certificate" />
+              <h3>React JavaScript Library</h3>
+              <div class="cert-icons">
+                <a href="Zertifikat_JavaScript_Bibliothek.pdf" target="_blank" rel="noopener" class="fas fa-eye" title="Преглед"></a>
+                <a href="Zertifikat_JavaScript_Bibliothek.pdf" download class="fas fa-download" title="Изтегли"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-slide">
+            <div class="cert-card">
+              <img src="cert/cert_java.png" alt="Java Developer Certificate" />
+              <h3>Java Developer (OOP, GUI, Databases)</h3>
+              <div class="cert-icons">
+                <a href="Zertifikat_JAVA.pdf" target="_blank" rel="noopener" class="fas fa-eye" title="Преглед"></a>
+                <a href="Zertifikat_JAVA.pdf" download class="fas fa-download" title="Изтегли"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-slide">
+            <div class="cert-card">
+              <img src="cert/cert_python.png" alt="Python Programming Certificate" />
+              <h3>Programming with Python</h3>
+              <div class="cert-icons">
+                <a href="Zertifikat_Python.pdf" target="_blank" rel="noopener" class="fas fa-eye" title="Преглед"></a>
+                <a href="Zertifikat_Python.pdf" download class="fas fa-download" title="Изтегли"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-slide">
+            <div class="cert-card">
+              <img src="cert/cert_softuni_basics.png" alt="SoftUni Programming Basics Certificate" />
+              <h3>SoftUni - Programming Basics</h3>
+              <div class="cert-icons">
+                <a href="certifikate_softuni_basics.pdf" target="_blank" rel="noopener" class="fas fa-eye" title="Преглед"></a>
+                <a href="certifikate_softuni_basics.pdf" download class="fas fa-download" title="Изтегли"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-slide">
+            <div class="cert-card">
+              <img src="cert/cert_softuni_fundamentals.png" alt="SoftUni JavaScript Fundamentals Certificate" />
+              <h3>SoftUni - JavaScript Fundamentals</h3>
+              <div class="cert-icons">
+                <a href="certifikate_softuni_fundamentals_JS.pdf" target="_blank" rel="noopener" class="fas fa-eye" title="Преглед"></a>
+                <a href="certifikate_softuni_fundamentals_JS.pdf" download class="fas fa-download" title="Изтегли"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-slide">
+            <div class="cert-card">
+              <img src="cert/cert_softuni_vibecoding.png" alt="SoftUni VibeCoding Certificate" />
+              <h3>SoftUni - VibeCoding</h3>
+              <div class="cert-icons">
+                <a href="SoftUni_VibeCoding_PDF.pdf" target="_blank" rel="noopener" class="fas fa-eye" title="Преглед"></a>
+                <a href="SoftUni_VibeCoding_PDF.pdf" download class="fas fa-download" title="Изтегли"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-slide">
+            <div class="cert-card">
+              <img src="cert/cert_softuni_ai.png" alt="SoftUni AI Programming Certificate" />
+              <h3>SoftUni - Introduction to Programming with AI</h3>
+              <div class="cert-icons">
+                <a href="Introduction to Programming with AI - October 2025 - Certificate.pdf" target="_blank" rel="noopener" class="fas fa-eye" title="Преглед"></a>
+                <a href="Introduction to Programming with AI - October 2025 - Certificate.pdf" download class="fas fa-download" title="Изтегли"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-slide">
+            <div class="cert-card">
+              <img src="cert/cert_softuni_js_apps.png" alt="SoftUni JS Applications Certificate" />
+              <h3>SoftUni - JS Applications</h3>
+              <div class="cert-icons">
+                <a href="JS Applications - October 2025 - Certificate.pdf" target="_blank" rel="noopener" class="fas fa-eye" title="Преглед"></a>
+                <a href="JS Applications - October 2025 - Certificate.pdf" download class="fas fa-download" title="Изтегли"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-slide">
+            <div class="cert-card">
+              <img src="cert/cert_softuni_js_advanced.png" alt="SoftUni JS Advanced Certificate" />
+              <h3>SoftUni - JS Advanced</h3>
+              <div class="cert-icons">
+                <a href="JS Advanced - September 2025 - Certificate.pdf" target="_blank" rel="noopener" class="fas fa-eye" title="Преглед"></a>
+                <a href="JS Advanced - September 2025 - Certificate.pdf" download class="fas fa-download" title="Изтегли"></a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="box">
-        <embed src="Zertifikat_Webdesign.pdf" type="application/pdf" />
-        <h3>Web Design with HTML, CSS and Dreamweaver</h3>
-      </div>
-
-      <div class="box">
-        <embed src="Zertifikat_Javascript_Ajax.pdf" type="application/pdf" />
-        <h3>JavaScript Developer (AJAX, DOM, SPA)</h3>
-      </div>
-
-      <div class="box">
-        <embed src="Zertifikat_JavaScript_Bibliothek.pdf" type="application/pdf" />
-        <h3>React JavaScript Library</h3>
-      </div>
-
-      <div class="box">
-        <embed src="Zertifikat_JAVA.pdf" type="application/pdf" />
-        <h3>Java Developer (OOP, GUI, Databases)</h3>
-      </div>
-
-      <div class="box">
-        <embed src="Zertifikat_Python.pdf" type="application/pdf" />
-        <h3>Programming with Python</h3>
-      </div>
-
-      <div class="box">
-        <embed src="certifikate_softuni_basics.pdf" type="application/pdf" />
-        <h3>SoftUni - Programming Basics</h3>
-      </div>
-
-      <div class="box">
-        <embed src="certifikate_softuni_fundamentals_JS.pdf" type="application/pdf" />
-        <h3>SoftUni - JavaScript Fundamentals</h3>
-      </div>
-
-      <div class="box">
-        <embed src="SoftUni_VibeCoding_PDF.pdf" type="application/pdf" />
-        <h3>SoftUni - VibeCoding</h3>
-      </div>
-
-      <div class="box">
-        <embed src="Introduction to Programming with AI - October 2025 - Certificate.pdf" type="application/pdf" />
-        <h3>SoftUni - Introduction to Programming with AI</h3>
-      </div>
-
-      <div class="box">
-        <embed src="JS Applications - October 2025 - Certificate.pdf" type="application/pdf" />
-        <h3>SoftUni - JS Applications</h3>
-      </div>
-
-      <div class="box">
-        <embed src="JS Advanced - September 2025 - Certificate.pdf" type="application/pdf" />
-        <h3>SoftUni - JS Advanced</h3>
-      </div>
+      <button class="cert-slider-btn cert-next" aria-label="Next certificates">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
+
+    <div class="cert-slider-dots"></div>
   </div>
 </section>
 
@@ -213,79 +357,100 @@
     <!-- portfolio section  -->
     <section class="portfolio" id="portfolio">
       <div class="center">
-        <h1 class="heading"><span> completed </span> projects </h1>
+        <h1 class="heading"><span>Completed</span> Projects</h1>
 
-        <div class="box-container">
-          <div class="box">
-            <img src="img_projekt6.png" alt="SwingMe Dating App" />
-            <h3>project 06 - SwingMe</h3>
-            <div class="icons">
-              <a href="https://swingme.netlify.app/" target="_blank" rel="noopener" class="fas fa-link"></a>
-              <a href="https://swingme.netlify.app/" target="_blank" rel="noopener" class="fas fa-share"></a>
-              <a href="https://swingme.netlify.app/" target="_blank" rel="noopener" class="fas fa-search"></a>
+        <div class="portfolio-slider-container">
+          <button class="portfolio-slider-btn portfolio-prev" aria-label="Previous projects">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <div class="portfolio-slider-wrapper">
+            <div class="portfolio-slider">
+              <div class="portfolio-slide">
+                <div class="portfolio-card">
+                  <img src="img_projekt6.png" alt="SwingMe Dating App" />
+                  <h3>SwingMe Dating App</h3>
+                  <div class="portfolio-icons">
+                    <a href="https://swingme.netlify.app/" target="_blank" rel="noopener" class="fas fa-link"></a>
+                    <a href="https://swingme.netlify.app/" target="_blank" rel="noopener" class="fas fa-external-link-alt"></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="portfolio-slide">
+                <div class="portfolio-card">
+                  <img src="img_old_florence.png" alt="Restaurant The Old Florence" />
+                  <h3>Restaurant The Old Florence</h3>
+                  <div class="portfolio-icons">
+                    <a href="https://theoldflorence.netlify.app/" target="_blank" rel="noopener" class="fas fa-link"></a>
+                    <a href="https://theoldflorence.netlify.app/" target="_blank" rel="noopener" class="fas fa-external-link-alt"></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="portfolio-slide">
+                <div class="portfolio-card">
+                  <img src="img_gloos.png" alt="Hairdresser Gloss" />
+                  <h3>Hairdresser Gloss</h3>
+                  <div class="portfolio-icons">
+                    <a href="https://nik0hairdresser.netlify.app/" target="_blank" rel="noopener" class="fas fa-link"></a>
+                    <a href="https://nik0hairdresser.netlify.app/" target="_blank" rel="noopener" class="fas fa-external-link-alt"></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="portfolio-slide">
+                <div class="portfolio-card">
+                  <img src="img_projekt5.png" alt="Courtney Barnett Website" />
+                  <h3>Courtney Barnett Website</h3>
+                  <div class="portfolio-icons">
+                    <a href="https://courtney-barnett-website.netlify.app/" target="_blank" rel="noopener" class="fas fa-link"></a>
+                    <a href="https://courtney-barnett-website.netlify.app/" target="_blank" rel="noopener" class="fas fa-external-link-alt"></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="portfolio-slide">
+                <div class="portfolio-card">
+                  <img src="img_projekt.3.png" alt="Portfolio" />
+                  <h3>Portfolio Website</h3>
+                  <div class="portfolio-icons">
+                    <a href="#" class="fas fa-link"></a>
+                    <a href="#" class="fas fa-external-link-alt"></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="portfolio-slide">
+                <div class="portfolio-card">
+                  <img src="img_projekt4.png" alt="CV Website" />
+                  <h3>CV Website N.S</h3>
+                  <div class="portfolio-icons">
+                    <a href="https://cv-website-for-nikol-g449.bolt.host/" target="_blank" rel="noopener" class="fas fa-link"></a>
+                    <a href="https://cv-website-for-nikol-g449.bolt.host/" target="_blank" rel="noopener" class="fas fa-external-link-alt"></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="portfolio-slide">
+                <div class="portfolio-card">
+                  <img src="img_projekt7.png" alt="ApexDrive" />
+                  <h3>ApexDrive</h3>
+                  <div class="portfolio-icons">
+                    <a href="https://apexdrivee.netlify.app/#/register" target="_blank" rel="noopener" class="fas fa-link"></a>
+                    <a href="https://apexdrivee.netlify.app/#/register" target="_blank" rel="noopener" class="fas fa-external-link-alt"></a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="box">
-            <img src="img_projekt5.png" alt="Courtney Barnett Website" />
-            <h3>project 05 - Courtney Barnett Website</h3>
-            <div class="icons">
-              <a href="https://courtney-barnett-website.netlify.app/" target="_blank" rel="noopener" class="fas fa-link"></a>
-              <a href="https://courtney-barnett-website.netlify.app/" target="_blank" rel="noopener" class="fas fa-share"></a>
-              <a href="https://courtney-barnett-website.netlify.app/" target="_blank" rel="noopener" class="fas fa-search"></a>
-            </div>
-          </div>
-
-          <div class="box">
-            <img src="img_projekt.3.png" alt="portfolio" />
-            <h3>project 03 - Portfolio</h3>
-            <div class="icons">
-              <a href="#" class="fas fa-link"></a>
-              <a href="#" class="fas fa-share"></a>
-              <a href="#" class="fas fa-search"></a>
-            </div>
-          </div>
-
-          <div class="box">
-            <img src="img_projekt4.png" alt="CV Website" />
-            <h3>project 04 - CV Website_N.S</h3>
-            <div class="icons">
-              <a href="https://cv-website-for-nikol-g449.bolt.host/" target="_blank" rel="noopener" class="fas fa-link"></a>
-              <a href="https://cv-website-for-nikol-g449.bolt.host/" target="_blank" rel="noopener" class="fas fa-share"></a>
-              <a href="https://cv-website-for-nikol-g449.bolt.host/" target="_blank" rel="noopener" class="fas fa-search"></a>
-            </div>
-          </div>
-
-          <div class="box">
-            <img src="img_projekt7.png" alt="ApexDrive" />
-            <h3>project 07 - ApexDrive</h3>
-            <div class="icons">
-              <a href="https://apexdrivee.netlify.app/#/register" target="_blank" rel="noopener" class="fas fa-link"></a>
-              <a href="https://apexdrivee.netlify.app/#/register" target="_blank" rel="noopener" class="fas fa-share"></a>
-              <a href="https://apexdrivee.netlify.app/#/register" target="_blank" rel="noopener" class="fas fa-search"></a>
-            </div>
-          </div>
-
-          <div class="box">
-            <img src="img_projejekt1.png" alt="immobilien" />
-            <h3>project 01 - Immobilien</h3>
-            <div class="icons">
-              <a href="#" class="fas fa-link"></a>
-              <a href="#" class="fas fa-share"></a>
-              <a href="#" class="fas fa-search"></a>
-            </div>
-          </div>
-
-          <div class="box">
-            <img src="img_projekt2.png" alt="slider" />
-            <h3>project 02 - Slider</h3>
-            <div class="icons">
-              <a href="#" class="fas fa-link"></a>
-              <a href="#" class="fas fa-share"></a>
-              <a href="#" class="fas fa-search"></a>
-            </div>
-          </div>
+          <button class="portfolio-slider-btn portfolio-next" aria-label="Next projects">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
+
+        <div class="portfolio-slider-dots"></div>
       </div>
     </section>
 
