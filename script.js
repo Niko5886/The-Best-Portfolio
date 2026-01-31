@@ -304,7 +304,19 @@ class CertificateSlider {
     }
 
     updateSlider() {
-        const slideWidth = this.slider.offsetWidth / this.itemsPerView;
+        // Use wrapper width (visible area) for calculation
+        const wrapperWidth = this.sliderWrapper.offsetWidth;
+        // On mobile (1 item), no gap needed; otherwise 1rem gap
+        const gap = this.itemsPerView === 1 ? 0 : 16;
+        
+        // Calculate slide width based on items per view
+        let slideWidth;
+        if (this.itemsPerView === 1) {
+            slideWidth = wrapperWidth;
+        } else {
+            slideWidth = (wrapperWidth - gap * (this.itemsPerView - 1)) / this.itemsPerView + gap;
+        }
+        
         const translateValue = -this.currentIndex * slideWidth;
         this.slider.style.transform = `translateX(${translateValue}px)`;
         
@@ -378,8 +390,11 @@ class PortfolioSlider {
     handleResize() {
         const width = this.sliderWrapper.offsetWidth;
         const prevItemsPerView = this.itemsPerView;
+        const isPhone = window.matchMedia('(max-width: 900px) and (pointer: coarse)').matches;
         
-        if (width < 768) {
+        if (isPhone) {
+            this.itemsPerView = 1;
+        } else if (width < 768) {
             this.itemsPerView = 1;
         } else if (width < 1024) {
             this.itemsPerView = 2;
@@ -415,7 +430,19 @@ class PortfolioSlider {
     }
 
     updateSlider() {
-        const slideWidth = this.slider.offsetWidth / this.itemsPerView;
+        // Use wrapper width (visible area) for calculation
+        const wrapperWidth = this.sliderWrapper.offsetWidth;
+        // On mobile (1 item), no gap needed; otherwise 1rem gap
+        const gap = this.itemsPerView === 1 ? 0 : 16;
+        
+        // Calculate slide width based on items per view
+        let slideWidth;
+        if (this.itemsPerView === 1) {
+            slideWidth = wrapperWidth;
+        } else {
+            slideWidth = (wrapperWidth - gap * (this.itemsPerView - 1)) / this.itemsPerView + gap;
+        }
+        
         const translateValue = -this.currentIndex * slideWidth;
         this.slider.style.transform = `translateX(${translateValue}px)`;
         

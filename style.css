@@ -1707,7 +1707,16 @@ header .social-links a.social-link:hover i {
         }
 
         .portfolio-slider {
-            gap: 1rem;
+            gap: 0;
+        }
+
+        .cert-slide {
+            min-width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .certificate-slider {
+            gap: 0;
         }
     }
 
@@ -1924,6 +1933,10 @@ header .social-links a.social-link:hover i {
       flex: 0 0 100%;
     }
 
+    .certificate-slider {
+      gap: 0;
+    }
+
     .certificate-slider-container {
       gap: 1rem;
     }
@@ -2112,6 +2125,10 @@ header .social-links a.social-link:hover i {
     .portfolio-slide {
       min-width: 100% !important;
       flex: 0 0 100% !important;
+    }
+
+    .portfolio-slider {
+      gap: 0;
     }
 
     .portfolio-slider-container {
