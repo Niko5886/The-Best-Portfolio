@@ -121,7 +121,7 @@ section.fade-in {
 
 .heading{
     font-size: 4rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
     color: var(--text-color);
     text-transform: uppercase;
     text-shadow: 0 0 20px var(--glow), 0 0 40px var(--glow);
@@ -950,8 +950,9 @@ header .social-links a.social-link:hover i {
 .about .row-1{
     display: flex;
     flex-wrap: wrap;
-    gap:2rem;
+    gap:1.5rem;
     padding-bottom: 2rem;
+    margin-top: 0;
 }
 
 .about .row-1 .image{
@@ -959,7 +960,8 @@ header .social-links a.social-link:hover i {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    margin-top: 6rem; /* Push image down to align with paragraph text */
 }
 
 .about .row-1 .image::before {
@@ -969,12 +971,13 @@ header .social-links a.social-link:hover i {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    height: 95%;
+    height: 100%; /* Changed from 95% to 100% to match image better but strictly bound by image size */
     background: linear-gradient(135deg, var(--accent-color), var(--main-color));
     border-radius: 8px;
     z-index: -1;
     opacity: 0.3;
     filter: blur(15px);
+    max-height: 510px; /* Limit height to match the max-height of the image */
 }
 
 .about .row-1 .image img{
