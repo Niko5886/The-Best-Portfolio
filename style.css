@@ -993,12 +993,14 @@ header .social-links a.social-link:hover i {
 
 .about .row-1 .content{
     flex:1 1 50rem;
+    margin-top: 6rem;
 }
 
 .about .row-1 .content h3{
     color: var(--text-color);
     font-size: 3.5rem;
     text-shadow: 0 0 10px rgba(0, 217, 255, 0.2);
+    margin-bottom: 1.2rem;
 }
 
 .about .row-1 .content p{
@@ -1006,6 +1008,25 @@ header .social-links a.social-link:hover i {
     font-size: 1.7rem;
     padding:.5rem 0;
     line-height: 1.8;
+}
+
+.about .row-1 .content .tech-keyword {
+    font-weight: 600;
+}
+
+.about .row-1 .content .tech-keyword-cyan {
+    color: var(--main-color);
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.35);
+}
+
+.about .row-1 .content .tech-keyword-pink {
+    color: var(--accent-color);
+    text-shadow: 0 0 10px rgba(255, 0, 128, 0.35);
+}
+
+.about .row-1 .content .tech-keyword-blue {
+    color: #3ab7ff;
+    text-shadow: 0 0 10px rgba(58, 183, 255, 0.35);
 }
 
 .about .row-1 .content .box-container{
@@ -1022,6 +1043,11 @@ header .social-links a.social-link:hover i {
 .about .row-1 .content .box-container .box span{
     color: var(--main-color);
     text-shadow: 0 0 10px var(--glow);
+}
+
+.about .row-1 .content .btn {
+    display: table;
+    margin: 2rem auto 0;
 }
 
 .about .row-2{
