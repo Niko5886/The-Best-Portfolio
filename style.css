@@ -25,7 +25,7 @@
 }
 
 *{
-     font-family: 'Ubuntu', sans-serif; 
+     font-family: 'Ubuntu', sans-serif;
     margin:0; padding:0;
     box-sizing: border-box;
     outline: none; border:none;
@@ -33,6 +33,33 @@
     text-transform: capitalize;
     transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
     line-height: 1.5;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+/* Re-enable text typing/selection only for editable form fields */
+input:not([type="submit"]):not([type="button"]):not([type="reset"]),
+textarea,
+[contenteditable="true"] {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    cursor: text;
+}
+
+/* Keep a pointer cursor on interactive controls */
+a,
+button,
+.btn,
+input[type="submit"],
+input[type="button"],
+[role="button"],
+label {
+    cursor: pointer;
 }
 
 html{
