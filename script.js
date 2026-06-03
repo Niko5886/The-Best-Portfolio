@@ -85,7 +85,10 @@ window.addEventListener('load', () => {
     const loader = document.querySelector('.loader-wrapper');
     setTimeout(() => {
         loader.classList.add('fade-out');
-    }, 1000);
+        loader.addEventListener('transitionend', () => {
+            loader.style.display = 'none';
+        }, { once: true });
+    }, 200);
 });
 
 // Menu
