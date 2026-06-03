@@ -1058,64 +1058,145 @@ header .social-links a.social-link:hover i {
     align-items: center;
 }
 
-.about .row-2 .skills{
+/* Skills - Bento Grid */
+.about .row-2 .skills-bento{
     flex:1 1 40rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
 }
 
-.about .row-2 .skills .progress{
-    padding:1rem 0;
-}
-
-.about .row-2 .skills .progress h3{
+.about .row-2 .skills-bento .skill-tile{
+    position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    padding:.7rem 0;
-    font-size: 1.7rem;
+    gap: 1.2rem;
+    padding: 2rem;
+    min-height: 12rem;
+    background: var(--secondary-bg);
+    border: 1px solid rgba(0, 217, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 .5rem 1rem var(--shadow);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.4s ease,
+                border-color 0.4s ease;
+}
+
+.about .row-2 .skills-bento .skill-tile.fade-in{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about .row-2 .skills-bento .skill-tile::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, var(--glow), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.about .row-2 .skills-bento .skill-tile:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px var(--glow);
+    border-color: var(--main-color);
+}
+
+.about .row-2 .skills-bento .skill-tile:hover::before{
+    opacity: 1;
+}
+
+.about .row-2 .skills-bento .skill-tile i{
+    font-size: 3.2rem;
+    background: linear-gradient(135deg, var(--main-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 12px var(--glow));
+    transition: transform 0.4s ease;
+}
+
+.about .row-2 .skills-bento .skill-tile:hover i{
+    transform: scale(1.15) rotate(-5deg);
+}
+
+.about .row-2 .skills-bento .skill-tile .skill-info h4{
+    font-size: 1.9rem;
+    font-weight: 600;
     color: var(--text-color);
-    font-weight: 400;
+    line-height: 1.2;
 }
 
-.about .row-2 .skills .progress .bar{
-    width:100%;
-    background: rgba(255, 255, 255, 0.1);
-    overflow:hidden;
-    height:1.2rem;
-    border-radius: 50rem;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+.about .row-2 .skills-bento .skill-tile .skill-tag{
+    display: inline-block;
+    margin-top: .6rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+    color: var(--main-color);
 }
 
-.about .row-2 .skills .progress .bar span{
-    display:block;
-    height:100%;
-    background: linear-gradient(90deg, var(--main-color), var(--accent-color));
-    border-radius: 50rem;
-    box-shadow: 0 0 20px var(--glow);
-    animation: progressGlow 2s infinite alternate;
+.about .row-2 .skills-bento .skill-tile-wide{
+    grid-column: span 2;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
 }
 
-@keyframes progressGlow {
-    0% { box-shadow: 0 0 10px var(--glow); }
-    100% { box-shadow: 0 0 20px var(--glow), 0 0 30px var(--main-color); }
+.about .row-2 .skills-bento .skill-tile-wide i{
+    font-size: 4rem;
 }
 
-.about .row-2 .skills .progress:nth-child(1) .bar span{
-    width:45%;
+.about .row-2 .skills-bento .skill-tile-signature{
+    border-color: rgba(255, 0, 128, 0.4);
+    background: linear-gradient(135deg, rgba(255, 0, 128, 0.12), var(--secondary-bg));
 }
 
-.about .row-2 .skills .progress:nth-child(2) .bar span{
-    width:56%;
+.about .row-2 .skills-bento .skill-tile-signature::before{
+    background: radial-gradient(circle at top right, rgba(255, 0, 128, 0.35), transparent 60%);
 }
 
-.about .row-2 .skills .progress:nth-child(3) .bar span{
-    width:25%;
+.about .row-2 .skills-bento .skill-tile-signature:hover{
+    border-color: var(--accent-color);
+    box-shadow: 0 15px 40px rgba(255, 0, 128, 0.35);
 }
 
-.about .row-2 .skills .progress:nth-child(4) .bar span{
-    width:15%;
+.about .row-2 .skills-bento .skill-tile-signature i{
+    background: linear-gradient(135deg, var(--accent-color), var(--main-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 14px rgba(255, 0, 128, 0.5));
 }
 
-.about .row-2 .skills .progress:nth-child(5) .bar span{
-    width:30%;
+.about .row-2 .skills-bento .skill-tile-signature .skill-tag{
+    color: var(--accent-color);
+}
+
+@media (max-width: 768px){
+    .about .row-2 .skills-bento{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about .row-2 .skills-bento .skill-tile-wide{
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 450px){
+    .about .row-2 .skills-bento{
+        grid-template-columns: 1fr;
+    }
+    .about .row-2 .skills-bento .skill-tile-wide{
+        grid-column: span 1;
+    }
 }
 
 .about .row-2 .box-container{

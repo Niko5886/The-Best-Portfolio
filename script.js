@@ -149,6 +149,23 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
+// Staggered reveal for skill bento tiles
+const skillsBento = document.querySelector('.skills-bento');
+if (skillsBento) {
+    const skillTiles = skillsBento.querySelectorAll('.skill-tile');
+    const skillObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                skillTiles.forEach((tile, i) => {
+                    setTimeout(() => tile.classList.add('fade-in'), i * 120);
+                });
+                obs.disconnect();
+            }
+        });
+    }, { threshold: 0.2 });
+    skillObserver.observe(skillsBento);
+}
+
 // Update active navigation link
 function updateActiveNavLink(sectionId) {
     const navLinks = document.querySelectorAll('.nav-link');
