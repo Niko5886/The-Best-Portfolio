@@ -6,7 +6,7 @@ A modern, responsive portfolio website showcasing my skills, projects, and certi
 
 **[View Portfolio →](https://niko5886.github.io/The-Best-Portfolio/)**
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-222222?style=for-the-badge&logo=github&logoColor=white)](https://niko5886.github.io/The-Best-Portfolio/)
+[![Netlify Status](https://img.shields.io/badge/Netlify-Deployed-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://app.netlify.com)
 
 ---
 
@@ -205,7 +205,7 @@ The-Best-Portfolio_Three.js/
 - Font Awesome for icons
 - Google Fonts (Ubuntu)
 - Formspree for form handling
-- GitHub Pages for hosting
+- Netlify for hosting
 
 ---
 
