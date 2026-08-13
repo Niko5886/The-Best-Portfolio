@@ -60,8 +60,8 @@ The-Best-Portfolio_Three.js/
 ├── img_projekt6.png
 ├── img_projekt7.png
 │
-├── CVEnglish.pdf                # Downloadable CV
-├── Nikolay_Stoyanov_CV.pdf      # Downloadable CV (German)
+├── Nikolay_Stoyanov_CV_BG_EN.pdf  # Downloadable CV (BG/EN)
+├── CVEnglish.pdf                  # Older CV (English, not linked)
 │
 ├── Certificates (12 total):
 │   ├── Kombizertifikat_Frontend_Entwickler.pdf
